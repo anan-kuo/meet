@@ -4,7 +4,7 @@ $(function () {
 
 function Retrieve() {
     var dataArray = [];
-    var URL = 'https://script.google.com/macros/s/AKfycbw1kCKJELxArXU3gyWYb140Apn_gTRtmdhN-gRHXt-Y5XanOEps/exec';
+    var URL = 'https://script.google.com/macros/s/AKfycbxyW0EEqTurAe_hGf9CxC52sjYLsFcT3UPxUIox5oDgvXvzwKXa/exec';
     $.ajax({
         url: URL,
         type: 'POST',
@@ -20,8 +20,6 @@ function Retrieve() {
                 Applicant = Info[i].Applicant;
                 RoomName = Info[i].RoomName;
                 BorrowDate = Info[i].BorrowDate;
-                StartTime = Info[i].StartTime;
-                EndTime = Info[i].EndTime;
                 Reason = Info[i].Reason;
                 // 印出資料
                 print();
@@ -36,8 +34,6 @@ function Retrieve() {
                         '<td class="w-10">' + Applicant + '</td>' +
                         '<td class="w-10">' + RoomName + '</td>' +
                         '<td class="w-15">' + BorrowDate + '</td>' +
-                        '<td class="w-15">' + StartTime + '</td>' +
-                        '<td class="w-15">' + EndTime + '</td>' +
                         '<td class="w-10">' + Reason + '</td>' +
                     '</tr>'
                 );
